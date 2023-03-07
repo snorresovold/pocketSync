@@ -1,6 +1,6 @@
 {
   "name": "@snorresovold/pocketsync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use PocketSync to synchronise 2 different pocketbase instances",
   "main": "index.ts",
   "scripts": {
