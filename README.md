@@ -7,7 +7,7 @@ Pocketsync is a tool used for synchronising the schemas of different [pocketbase
 ## Example:
 You have a Pocketbase instance in prod and can't do development on that exact instance, then you could have a local instance of pocketbase to do development on and synchronise them when you're done. 
 
-You should probably use a Github action or other Devops tool to do this
+You should probably use a Github action or other Devops tool to do this.
 
 <br>
 
