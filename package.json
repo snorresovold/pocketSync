@@ -1,6 +1,6 @@
 {
   "name": "@snorresovold/pocketsync",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Use PocketSync to synchronise 2 different pocketbase instances",
   "main": "index.ts",
   "scripts": {
@@ -11,7 +11,9 @@
     "url": "git+https://github.com/snorresovold/pocketSync.git"
   },
   "keywords": [
-    "pocketbase"
+    "pocketbase",
+    "typescript",
+    "devops"
   ],
   "author": "https://github.com/snorresovold",
   "license": "MIT",
