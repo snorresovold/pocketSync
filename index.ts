@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import pocketSync from "./dist/schemaSync"
 import { Command } from "commander"
+import figlet from "figlet"
 
 /*
 
@@ -19,13 +20,30 @@ import { Command } from "commander"
 */
 
 const program = new Command();
-program.description('Our New CLI');
-program.version('0.0.1');
+program.description('Pocketsync')
+.version('1.1.0')
+.requiredOption("-u, -url <value...>", "The urls of the pocketbases you are syncing.")
+.requiredOption("-e, -email <value...>", "The email of the pocketbases you are syncing.")
+.requiredOption("-p, -password <value...>", "The password of the pocketbases you are syncing.")
+program.parse();
+console.log(figlet.textSync("PocketSync"));
 
-async function main() {
-    await program.parseAsync();
-
+/*
+function checkArgs(args: any) {
+    try {
+        args.values().length() == 2;
+    } catch(error) {
+        console.log(args.length())
+        console.log("Could not sync instances, you havent given All required args.")
+    }
 }
-console.log() // log a new line so there is a nice space
-main();
+*/
 
+const options = program.opts();
+
+for (const value in options) {
+    if (options[value].length != 2) {
+        console.log("Argument:", value, "Doesn't have 2 valid arguments")
+        process.exit(0)
+    }
+}
