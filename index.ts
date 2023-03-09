@@ -25,19 +25,10 @@ program.description('Pocketsync')
 .requiredOption("-u, -url <value...>", "The urls of the pocketbases you are syncing.")
 .requiredOption("-e, -email <value...>", "The email of the pocketbases you are syncing.")
 .requiredOption("-p, -password <value...>", "The password of the pocketbases you are syncing.")
-program.parse();
-console.log(figlet.textSync("PocketSync"));
 
-/*
-function checkArgs(args: any) {
-    try {
-        args.values().length() == 2;
-    } catch(error) {
-        console.log(args.length())
-        console.log("Could not sync instances, you havent given All required args.")
-    }
-}
-*/
+program.parse();
+
+console.log(figlet.textSync("PocketSync"));
 
 const options = program.opts();
 
@@ -45,5 +36,5 @@ for (const value in options) {
     if (options[value].length != 2) {
         console.log("Argument:", value, "Doesn't have 2 valid arguments")
         process.exit(0)
-    }
+    } 
 }
