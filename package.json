@@ -1,11 +1,13 @@
 {
   "name": "@snorresovold/pocketsync",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "Use PocketSync to synchronise 2 different pocketbase instances",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
+  "bin": "./index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/snorresovold/pocketSync.git"
@@ -22,6 +24,8 @@
   },
   "homepage": "https://github.com/snorresovold/pocketSync#readme",
   "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0",
     "pocketbase": "^0.12.0"
   }
 }
