@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import pocketSync from "./dist/schemaSync"
+import schemaSync from "./dist/schemaSync"
 import { Command } from "commander"
 import figlet from "figlet"
 
@@ -38,3 +38,5 @@ for (const value in options) {
         process.exit(0)
     } 
 }
+
+schemaSync(options["Email"])
