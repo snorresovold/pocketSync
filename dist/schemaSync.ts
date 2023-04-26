@@ -20,12 +20,12 @@ interface pocketSync{
 
 
 async function schemaSync({in_email, out_email, in_pswd, out_pswd, in_url, out_url} :pocketSync) {
-    const im = new PocketBase('https://scarce-salesmen.pockethost.io');
-    await im.admins.authWithPassword('snorresovold@gmail.com', 'SuzukiFraSverige05!');
+    const im = new PocketBase('pockethost _url');
+    await im.admins.authWithPassword('email1', 'password1');
     let im_collections = await im.collections.getFullList();
 
     const out = new PocketBase('http://127.0.0.1:8090');
-    await out.admins.authWithPassword('snorresovold@gmail.com', 'ToyotaFraBiltema05!');
+    await out.admins.authWithPassword('email2', 'password2');
 
     await out.collections.import(im_collections, true);
 }
